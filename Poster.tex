@@ -1,0 +1,82 @@
+\documentclass[25pt, a0paper, portrait]{tikzposter}
+\usepackage[czech]{babel}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\usepackage{hologo}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage[czech=quotes]{csquotes}
+
+\setmainfont{LibertinusSerif-Regular}
+\setsansfont{LibertinusSans-Regular}
+\setmonofont{LibertinusMono-Regular}
+\setmathfont{LibertinusMath-Regular}
+
+\title{Sazba technických dokumentů}
+\author{doc.\ Mgr.\ Jiří Dvorský, Ph.D.}
+\institute{Katedra informatiky\\ Fakulta elektrotechniky a informatiky\\ VŠB -- TU Ostrava}
+%\titlegraphic{\includegraphics[width=0.25\textwidth]{Figures/460-FEI-CZ.pdf}}
+\titlegraphic{\includegraphics[width=0.33\textwidth]{Figures/MSMT_EU_Logolink.jpeg}}
+
+\urlstyle{tt}
+
+\definecolor{VSBTUOGreen}{HTML}{00A499}
+
+\usetheme{Simple}
+\usecolorstyle[colorTwo=VSBTUOGreen]{Default}
+\colorlet{backgroundcolor}{white}
+\colorlet{blocktitlefgcolor}{black}
+
+
+\newcommand{\BibLaTeXLogo}{\texttt{biblatex}}
+\newcommand{\BeamerLogo}{\textsc{Beamer}}
+\newcommand{\PgfPlotsLogo}{\textsc{pgfplots}}
+\newcommand{\TikZLogo}{TikZ}
+\newcommand{\GeneralName}[1]{\texttt{#1}}
+
+
+\begin{document}
+\maketitle
+
+\begin{columns}
+	\column{0.33}
+	{
+		\input{Lecture1.tex}
+		\input{Lecture2.tex}
+		\block{}
+		{
+			\begin{center}
+				\includegraphics[width=0.9\colwidth]{Figures/ctanlion.pdf}
+			\end{center}
+		}
+		\block[bodyoffsetx=115mm, bodyverticalshift=-20mm]{}{\includegraphics[width=1.2\colwidth]{Figures/LaTeXProjectLogo.png}}
+	}
+	\column{0.33}
+	{
+		\input{Lecture3.tex}
+		\input{Lecture4.tex}
+		\block{}
+		{
+			\rotatebox{15}
+			{
+				\coloredbox[width=0.9\colwidth]
+				{
+					\begin{center}
+						Více informací o předmětu najdete na\\
+						\bigskip
+						\url{www.cs.vsb.cz\dvorsky\STD.html}
+					\end{center}
+				}
+			}
+		}
+	}
+	\column{0.33}
+	{
+		\input{Lecture5.tex}
+		\input{Lecture6.tex}
+		\input{Lecture7.tex}
+	}
+\end{columns}
+
+\end{document}
